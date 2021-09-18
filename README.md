@@ -1,6 +1,9 @@
 # FalmeGraph
 火焰图查看
 ```
+解压perf.tgz
+执行perf命令，对进程进行perf
+perf record -g -F 1000 -p [PID]
 export PATH=`pwd`/FlameGraph:$PATH
 
 perf script | stackcollapse-perf.pl | flamegraph.pl > perf.svg
